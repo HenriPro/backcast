@@ -4,7 +4,6 @@ var VideoListView = Backbone.View.extend({
   //we want to render every data (which should be 5)
     //we get frin
   initialize: function() {
-
     this.collection.on('sync', this.render, this);  
   
   },
