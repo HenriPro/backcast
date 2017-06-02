@@ -32,8 +32,19 @@
 
   <script>
     backboneReady(() => {
-      new AppView();
+      // var videos = new Videos(exampleVideoData);
+      // new AppView();
+      // var appView = new AppView();
+      // appView.videos.reset(exampleVideoData);
+
+      var videoList = _.map(exampleVideoData, video => new Video(video));
+
+      var videos = new Videos(videoList);
+
+      new AppView({el: $('#app'), collection: videos});
+
     });
+  
   </script>
 
 </body>
